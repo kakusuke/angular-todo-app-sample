@@ -1,0 +1,10 @@
+<form ng-submit="addTodo()" />
+<input type="text" ng-model="text" placeholder="Enter your todo" />
+</form>
+
+<ul>
+	<li ng-repeat="todo in todoList" ng-class="{'done':todo.done}">
+    <input type="checkbox" ng-model="todo.done" />
+		<span contenteditable="true" ng-model="todo.text"></span>
+	</li>
+</ul>
